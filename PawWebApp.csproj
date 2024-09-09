@@ -1,0 +1,77 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+    <Folder Include="wwwroot\img\" />
+    <Folder Include="wwwroot\uploads\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\img\about\a1.jpg" />
+    <None Include="wwwroot\img\about\a2.jpg" />
+    <None Include="wwwroot\img\banner\b0.png" />
+    <None Include="wwwroot\img\banner\b1.png" />
+    <None Include="wwwroot\img\banner\b17.png" />
+    <None Include="wwwroot\img\banner\b2.png" />
+    <None Include="wwwroot\img\banner\b3.png" />
+    <None Include="wwwroot\img\banner\b4.png" />
+    <None Include="wwwroot\img\banner\b5.png" />
+    <None Include="wwwroot\img\banner\b6.png" />
+    <None Include="wwwroot\img\banner\b7.png" />
+    <None Include="wwwroot\img\blog\b1.jpg" />
+    <None Include="wwwroot\img\blog\b2.jpg" />
+    <None Include="wwwroot\img\blog\b3.jpg" />
+    <None Include="wwwroot\img\blog\b4.jpg" />
+    <None Include="wwwroot\img\features\f1.png" />
+    <None Include="wwwroot\img\features\f2.png" />
+    <None Include="wwwroot\img\features\f3.png" />
+    <None Include="wwwroot\img\features\f4.jpg" />
+    <None Include="wwwroot\img\features\f4.png" />
+    <None Include="wwwroot\img\features\f5.png" />
+    <None Include="wwwroot\headlogo.ico" />
+    <None Include="wwwroot\img\headlogo.png" />
+    <None Include="wwwroot\img\hero4.png" />
+    <None Include="wwwroot\img\pay\app.png" />
+    <None Include="wwwroot\img\pay\pay.jpg" />
+    <None Include="wwwroot\img\pay\play.png" />
+    <None Include="wwwroot\img\people\1.png" />
+    <None Include="wwwroot\img\people\2.png" />
+    <None Include="wwwroot\img\people\3.png" />
+    <None Include="wwwroot\img\people\people1.jpg" />
+    <None Include="wwwroot\img\people\people2.jpg" />
+    <None Include="wwwroot\img\products\f1.png" />
+    <None Include="wwwroot\img\products\f1_1.png" />
+    <None Include="wwwroot\img\products\f1_2.png" />
+    <None Include="wwwroot\img\products\f1_3.png" />
+    <None Include="wwwroot\img\products\f2.png" />
+    <None Include="wwwroot\img\products\f3.png" />
+    <None Include="wwwroot\img\products\f4.png" />
+    <None Include="wwwroot\img\products\f5.png" />
+    <None Include="wwwroot\img\products\f6.png" />
+    <None Include="wwwroot\img\products\f7.png" />
+    <None Include="wwwroot\img\products\f8.png" />
+    <None Include="wwwroot\img\products\f9.png" />
+    <None Include="wwwroot\img\tranaware-logo.png" />
+  </ItemGroup>
+
+</Project>

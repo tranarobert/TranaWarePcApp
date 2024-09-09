@@ -1,0 +1,69 @@
+﻿@model IEnumerable<PawWebApp.Models.Contact>
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<body>
+    <section id="page-header" class="about-header" style="background-image: url('@Url.Content("~/img/banner/b4.png")');">
+
+        <h2>Contact us</h2>
+        <p>Let us know if you have any problems or any feedback.</p>
+
+    </section>
+
+    <section id="contact-details" class="section-p1">
+        <div class="details">
+            <span>Get in touch</span>
+            <h2>Visit us at our headquarters or contact us today!</h2>
+
+            <div>
+                <li>
+                    <i class="fa-solid fa-map-pin"></i>
+                    <p>Bulevardul Decebal 107, Craiova 200776</p>
+                </li>
+                <li>
+                    <i class="fa-regular fa-envelope"></i>
+                    <p>adresa_mail@email.com</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+40 123 456 789</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-clock"></i>
+                    <p>10:00 - 23:00, Mon - Sat</p>
+                </li>
+            </div>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d848.8167955624556!2d23.834864081013702!3d44.308552502787066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4752d702cd0f3173%3A0xb159446a3e899375!2sFaculty%20of%20Automation%2C%20Computers%20and%20Electronics!5e0!3m2!1sen!2sro!4v1710124586065!5m2!1sen!2sro" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <section id="form-details">
+         <form asp-controller="Contacts" asp-action="Create" method="post">
+            <h2>We would love to hear your opinion!</h2>
+            <span>Leave a message</span>
+            <input type="text" name="Name" placeholder="Your Name">
+            <input type="text" name="Email" placeholder="Email">
+            <input type="text" name="Subject" placeholder="Subject">
+            <textarea id="" cols="30" rows="10" name="Message" placeholder="Your message"></textarea>
+            <button class="normal">Submit</button>
+        </form>
+
+        <div class="people">
+            <div>
+                <img src="~/img/people/3.png" alt="">
+                <p><span>Trană Robert</span> Chief Executive Officer<br>Phone: +40 123 456 789 <br> Email: example@email.com</p>
+            </div>
+            <div>
+                <img src="~/img/people/2.png" alt="">
+                <p><span>Jeremy Warner</span> Social Media Manager<br>Phone: +40 123 456 789 <br> Email: example@email.com</p>
+            </div>
+            <div>
+                <img src="~/img/people/1.png" alt="">
+                <p><span>Alfred Popescu</span> Project Manager<br>Phone: +40 123 456 789 <br> Email: example@email.com</p>
+            </div>
+        </div>
+    </section>
+</body>

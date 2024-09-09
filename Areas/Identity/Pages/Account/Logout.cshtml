@@ -1,0 +1,29 @@
+﻿@page
+@model LogoutModel
+@{
+    ViewData["Title"] = "Log out";
+}
+
+<body>
+    <section id="page-header" style="background-image: url('@Url.Content("~/img/banner/b6.png")');  margin-bottom: 20px;">
+
+        <h2>Log out</h2>
+        <p>Are you sure?</p>
+
+    </section>
+</body>
+
+<header>
+    @{
+        if (User.Identity?.IsAuthenticated ?? false)
+        {
+            <form class="form-inline mx-auto" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+                <button type="submit" class="nav-link btn btn-link text-dark mx-auto" style="background-color: red; border: 1px solid red;">Log out</button>
+            </form>
+        }
+        else
+        {
+            <p>You have successfully logged out of the application.</p>
+        }
+    }
+</header>

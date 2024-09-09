@@ -1,0 +1,46 @@
+﻿@model PawWebApp.Models.Cart
+
+<section id="cart" class="section-p1">
+    <table width="100%">
+        <thead>
+            <tr>
+                <td>Remove</td>
+                <td>Image</td>
+                <td>Product</td>
+                <td>Price</td>
+                <td>Quantity</td>
+                <td>Subtotal</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                <tr>
+                    <td><a href="@Url.Action("RemoveFromCart", "Cart", new { productId = item.ProductId })"><i class="fa-solid fa-xmark"></i></a></td>
+                    <td><img src="~/img/products/@item.ProductImage" alt="@item.ProductName"></td>
+                    <td>@item.ProductName</td>
+                    <td>@item.Price RON</td>
+                    <td><input type="number" value="@item.Quantity" readonly></td>
+                    <td>@(item.Price * item.Quantity) RON</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</section>
+
+<section id="cartadd" class="section-p1">
+    <div id="subtotal">
+        <h3>Cart Total</h3>
+        <table>
+            <tr>
+                <td>Cart Subtotal</td>
+                <td>@Model.TotalPrice RON</td>
+            </tr>
+            <tr>
+                <td><strong>Total</strong></td>
+                <td><strong>@Model.TotalPrice RON</strong></td>
+            </tr>
+        </table>
+        <a href="@Url.Action("Checkout", "Cart")" class="normal">Proceed to checkout</a>
+    </div>
+</section>

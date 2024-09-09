@@ -1,0 +1,173 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+	<!--
+        <section id="header">
+		<a href="index.html"><img src="~/img/tranaware-logo.png" class="logo" alt=""></a>
+
+		<div>
+			<ul id="navbar">
+				<li><a class="active" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+				<li><a href="pccomponents/products">Products</a></li>
+				<li><a href="upgrade.html">Upgrade</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="register.html">Log In</a></li>
+				<li><a href="cart.html">Cart</i></a></li>
+				<li><input type="text" placeholder="Search.."></li>
+
+			</ul>
+		</div>
+	</section>-->
+
+    <section id="hero" style="background-image: url('@Url.Content("~/img/hero4.png")');">
+        <h2>Discounts</h2>
+        <h1>on newly-added CPUs</h1>
+        <p>Up to 40% off!</p>
+        <button><a asp-area="" asp-controller="PcComponents" asp-action="Products">Buy Now</a></button>
+    </section>
+
+
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="~/img/features/f1.png" width="150">
+            <h6>Free Shipping</h6>
+        </div>
+        <!--
+		<div class="fe-box">
+					<img src="~/img/features/f2.png" width="150">
+					<h6>Online Order</h6>
+				</div>
+        -->
+        <!--
+        <div class="fe-box">
+            <img src="~/img/features/f3.png" width="150">
+            <h6>Great Deals</h6>
+        </div>
+
+        -->
+        <div class="fe-box">
+            <img src="~/img/features/f4.png" width="150">
+            <h6>24/7 Customer Support</h6>
+        </div>
+        <div class="fe-box">
+            <img src="~/img/features/f5.png" width="150">
+            <h6>Variety of Products</h6>
+        </div>
+
+
+    </section>
+	<!--
+    <section id="product1" class="section-p1">
+        <h2>Featured Products</h2>
+        <p>New components in stock!</p>
+        <div class="pro-container">
+            
+			<div class="pro" onclick="window.location.href='pccomponents/details/4'">
+							<img src="~/img/products/amd_ryzen_3_3200G.png" alt="">
+							<div class="des">
+								<span>AMD Ryzen 3 3200G 3.6GHz</span>
+			<div class="star">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			</div>
+			<h4>350 RON</h4>
+		</div>
+		<a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+		</div>
+            
+            
+
+        </div>
+    </section>
+	-->
+    <section id="banner" class="section-m1" style="background-image: url('@Url.Content("~/img/banner/b2.png")');">
+        <h4>Repair Services</h4>
+        <h2>Send your computer in for a <span>repair</span> or an <span>upgrade</span>!</h2>
+        <button class="normal"><a sp-area="" asp-controller="Upgrades" asp-action="Upgrade">More Details</a></button>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>New CPUs</h2>
+        <p>Brand new CPUs in stock!</p>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="~/img/products/f1.png" alt="">
+                <div class="des">
+                    <span>AMD Ryzen 7 8700G 4.2GHz</span>
+                    <!--<h5>CPU</h5>-->
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>1.399 RON</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="~/img/products/f2.png" alt="">
+                <div class="des">
+                    <span>AMD Ryzen 7 7800X3D 4.2GHz</span>
+                    <!--<h5>CPU</h5>-->
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>1.999 RON</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="~/img/products/f3.png" alt="">
+                <div class="des">
+                    <span>AMD Ryzen Threadripper PRO 7975WX 4.0Ghz</span>
+                    <!--<h5>CPU</h5>-->
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>1.399 lei</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sm-banner" class="section-p1">
+        <div class="banner-box" style="background-image: url('@Url.Content("~/img/banner/b17.png")');">
+            <h4>Crazy deals!</h4>
+            <h2>CPU + Motherboard Discounts</h2>
+            <span>Up to 35% off!</span>
+            <button class="white"><a asp-area="" asp-controller="PcComponents" asp-action="Products">Buy Now</a></button>
+        </div>
+
+        <div class="banner-box banner-box2" style="background-image: url('@Url.Content("~/img/banner/b1.png")');">
+            <h4>100% Safe!</h4>
+            <h2>2 Year Warranty Included</h2>
+            <span>With All Products!</span>
+            <button class="white"><a asp-area="" asp-controller="PcComponents" asp-action="Products">Buy Now</a></button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

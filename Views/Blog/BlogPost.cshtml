@@ -1,0 +1,72 @@
+﻿@section styles {
+    <style>
+        #blog-header {
+            width: 100%;
+            height: 40vh;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            padding: 40px;
+            position: relative;
+            margin-bottom: 40px; /* Add margin to create space */
+        }
+
+            #blog-header::before {
+                content: "";
+                background: url('@Url.Content("~/img/blog/" + Model.PhotoPath)') center/cover fixed;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: -1;
+                filter: blur(8px);
+            }
+
+            #blog-header .blog-post-text {
+                position: relative;
+                z-index: 1;
+                color: white; /* Set text color to white */
+            }
+
+        .blog-content {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            color: #333; /* Set text color to a darker shade */
+        }
+
+        .back-to-blogs {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+}
+
+<body>
+
+    <section id="blog-header">
+        <div class="blog-post-text">
+            <h2>@Model.Title</h2>
+            <p>@Model.Description</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <section class="blog-content">
+                    @Html.Raw(Model.Content)
+                </section>
+                <div class="back-to-blogs">
+                    <a href="@Url.Action("Blog", "Blog")">Back to Blogs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>

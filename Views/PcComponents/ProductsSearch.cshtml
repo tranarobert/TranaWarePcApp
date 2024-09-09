@@ -1,0 +1,124 @@
+﻿@model IEnumerable<PawWebApp.Models.PcComponent>
+
+@{
+    ViewData["Title"] = "Search";
+    int pageSize = 9;
+}
+
+
+<body>
+    <!--
+	    <section id="header">
+			    <a href="index.html"><img src="~/img/tranaware-logo.png" class="logo" alt=""></a>
+
+			    <div>
+				    <ul id="navbar">
+					    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+					    <li><a class="active" href="products.html">Products</a></li>
+					    <li><a href="upgrade.html">Upgrade</a></li>
+					    <li><a href="blog.html">Blog</a></li>
+					    <li><a href="about.html">About Us</a></li>
+					    <li><a href="contact.html">Contact</a></li>
+					    <li><a href="register.html">Log In</a></li>
+					    <li><a href="cart.html">Cart</i></a></li>
+					    <li><input type="text" placeholder="Search.."></li>
+
+				    </ul>
+			    </div>
+		    </section>
+    -->
+    <section id="page-header" style="background-image: url('@Url.Content("~/img/banner/b0.png")');">
+
+        <h2>PC Components</h2>
+        <p>Browse our variety of categories!</p>
+
+    </section>
+
+	<!-- <p>Total Products: @(ViewBag.totalFilteredProducts ?? "null")</p> -->
+
+    <section id="product1" class="section-p1">
+        <p>You searched for: @ViewBag.searchQuery</p>
+        <div class="pro-container">
+            @if (ViewBag.HasFilteredProducts != null)
+            {
+                @foreach(var prod in ViewBag.filteredProducts)
+                {
+                    <div class="pro" onclick="window.location.href='@Url.Action("Details", "PcComponents", new { id = prod.Id })'">
+                        <img class="product-photo" src="~/img/products/@prod.PhotoFileName">
+                        <div class="des">
+                            <span>@prod.Name</span>
+                            <!--<h5>CPU</h5>-->
+                            <div class="star">
+
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>@prod.Price RON</h4>
+                        </div>
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                }
+            }
+            else
+            {
+                @foreach (var prod in ViewBag.products)
+                {
+                    <div class="pro" onclick="window.location.href='@Url.Action("Details", "PcComponents", new { id = prod.Id })'">
+                        <img class="product-photo" src="~/img/products/@prod.PhotoFileName">
+                        <div class="des">
+                            <span>@prod.Name</span>
+                            <!--<h5>CPU</h5>-->
+                            <div class="star">
+
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>@prod.Price RON</h4>
+                        </div>
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                }
+            }
+            
+        </div>
+    </section>
+
+    @if (ViewBag.TotalProducts > 9)
+    {
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                <li class="page-item @(ViewBag.CurrentPage == 1 ? "disabled" : "")">
+                    <a class="page-link" href="@Url.Action("Products", new { page = ViewBag.CurrentPage - 1 })" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+
+                @for (int i = 1; i <= Math.Ceiling((double)ViewBag.TotalProducts / pageSize); i++)
+                {
+                    <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+                        <a class="page-link" href="@Url.Action("Products", new { page = i })">@i</a>
+                    </li>
+                }
+
+                <li class="page-item @(ViewBag.CurrentPage == Math.Ceiling((double)ViewBag.TotalProducts / pageSize) ? "disabled" : "")">
+                    <a class="page-link" href="@Url.Action("Products", new { page = ViewBag.CurrentPage + 1 })" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    }
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
