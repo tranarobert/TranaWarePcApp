@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Authorization.Infrastructure;
 
 namespace PawWebApp.Controllers
 {
+
 	public class BlogController : Controller
 	{
         private readonly IBlogService _blogService;
