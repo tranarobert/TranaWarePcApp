@@ -1,0 +1,53 @@
+﻿@model IEnumerable<PawWebApp.Models.Upgrade>
+
+@{
+    ViewData["Title"] = "Upgrade";
+}
+
+<body>
+    <section id="page-header" class="about-header" style="background-image: url('@Url.Content("~/img/banner/b4.png")');">
+        <h2>Upgrade / Repair</h2>
+        <p>Need an upgrade or a repair? Fill in the form below!</p>
+    </section>
+
+    <section id="about-head1" class="section-p1">
+        <img src="~/img/about/a2.jpg" alt="">
+        <div>
+            <h2>Repair / Upgrade Program</h2>
+            <p>Our Repair / Upgrade program allows the client to benefit from trade-in discounts as well as hardware mounting done by professionals with supportive advice.</p>
+        </div>
+    </section>
+
+    <section id="form-details">
+        <form asp-action="Create" method="post">
+            <h2>Fill in the form below in order to get a response from us.</h2>
+            <span>Choose the component to repair / upgrade:</span>
+            <label class="part-label">
+                <select name="PcPart">
+                    <option value="0">Select</option>
+                    <option value="CPU">CPU</option>
+                    <option value="GPU">GPU</option>
+                    <option value="CPUCooler">CPU Cooler</option>
+                    <option value="HDD">HDD</option>
+                    <option value="Motherboard">Motherboard</option>
+                    <option value="PCCase">PC Case</option>
+                    <option value="PSU">PSU</option>
+                    <option value="RAM">RAM</option>
+                    <option value="SSD">SSD</option>
+                </select>
+            </label>
+            <label class="part-label">
+                <select name="Subject">
+                    <option value="Repair">Repair</option>
+                    <option value="Upgrade">Upgrade</option>
+                </select>
+            </label>
+            <input type="text" name="Name" placeholder="Your Name">
+            <input type="text" name="Email" placeholder="Email">
+            <textarea name="Details" id="" cols="30" rows="10" placeholder="Details"></textarea>
+            <button class="normal" type="submit">Submit</button>
+        </form>
+
+
+    </section>
+</body>

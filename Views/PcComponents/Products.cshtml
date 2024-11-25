@@ -1,0 +1,90 @@
+﻿@model PawWebApp.Models.ProductsViewModel
+@{
+    ViewData["Title"] = "Products";
+}
+<style>
+    .pagination-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        position: fixed;
+        bottom: 20px;
+        width: 100%;
+    }
+
+    .pagination {
+        list-style-type: none;
+        padding: 0;
+    }
+
+        .pagination .page-item {
+            display: inline;
+        }
+
+        .pagination .page-link {
+            color: black;
+            padding: 8px 16px;
+            text-decoration: none;
+            border: 1px solid #ddd;
+            margin: 0 4px;
+        }
+
+        .pagination .page-item.active .page-link {
+            background-color: #4CAF50;
+            color: white;
+            border: 1px solid #4CAF50;
+        }
+
+        .pagination .page-link:hover {
+            background-color: #ddd;
+        }
+</style>
+<body>
+
+    <section id="page-header" style="background-image: url('@Url.Content("~/img/banner/b0.png")');">
+
+        <h2>PC Components</h2>
+        <p>Browse our variety of categories!</p>
+
+    </section>
+
+    <p>Total Products: @Model.TotalProducts</p>
+
+    <section id="product1" class="section-p1"> 
+        <div class="pro-container">
+                @if (Model.Products != null && Model.Products.Any())
+                {
+                    foreach (var product in Model.Products)
+                    {
+                        <div class="pro" onclick="window.location.href='@Url.Action("Details", "PcComponents", new { id = product.Id })'">
+                            <img class="product-photo" src="~/img/products/@product.PhotoFileName">
+                            <div class="des">
+                                <span>@product.Name</span>
+                                <h4>@product.Price RON</h4>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p>No products available.</p>
+                }
+
+            @if (Model.TotalPages > 1)
+            {
+                <nav class="pagination-container">
+                    <ul class="pagination">
+                        @for (int i = 1; i <= Model.TotalPages; i++)
+                        {
+                            <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                                <a class="page-link" href="?page=@i">@i</a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            }
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+

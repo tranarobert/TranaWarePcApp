@@ -1,0 +1,11 @@
+﻿
+@model Cart
+
+<section id="checkout" class="section-p1">
+    <h2>Confirm Your Order</h2>
+    <p>Total: @Model.TotalPrice RON</p>
+    <form asp-action="ConfirmOrder" method="post">
+        <button type="submit" class="btn btn-primary">Yes</button>
+        <a href="@Url.Action("ClearCart", "Cart")" class="btn btn-secondary">No</a>
+    </form>
+</section>

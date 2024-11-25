@@ -1,0 +1,180 @@
+﻿@model PawWebApp.Models.PcComponent
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<body>
+    <section id="prodetails" class="section-p1">
+        <div class="single-pro-image">
+            <img src="@Url.Content("~/img/products/" + @Model.PhotoFileName)" width="100%" alt="">
+            <!--
+                <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="~/img/products/f1.png" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="~/img/products/f1_1.png" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="~/img/products/f1_2.png" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="~/img/products/f1_3.png" width="100%" class="small-img" alt="">
+                </div>
+            </div>
+            -->
+            
+        </div>
+        <div class="single-pro-details">
+            <h4>@Model.Name</h4>
+            <h2>@Model.Price RON</h2>
+            <input type="number" value="1">
+            <a href="@Url.Action("AddToCart", "Cart", new { productId = Model.Id })" class="btn btn-primary">Add to Cart</a>
+
+            @* <button class="normal">Add to cart</button> *@
+            <h3>Specifications</h3>
+            <div class="specifications">
+                @if(Model.CPU!=null)
+                {
+                    <h5>Platform </h5><span>@Model.CPU.CPUPlatform</span>
+                    <h5>Socket: </h5><span>@Model.CPU.CPUSocket</span>
+                    <h5>Series: </h5><span>@Model.CPU.CPUSeries</span>
+                    <h5>Core: </h5><span>@Model.CPU.CPUCore</span>
+                    <h5>Core nr: </h5><span>@Model.CPU.CPUCoreNumber</span>
+                    <h5>Thread nr: </h5><span>@Model.CPU.CPUThreadNumber</span>
+                    <h5>Base Clock </h5><span>@Model.CPU.CPUBaseClock</span>
+                    <h5>Max Boost Clock: </h5><span>@Model.CPU.CPUMaxBoostClock</span>
+                    <h5>L3 Cache: </h5><span>@Model.CPU.CPUL3Cache</span>
+                    <h5>L2 Cache: </h5><span>@Model.CPU.CPUL2Cache</span>
+                    <h5>Max Temp: </h5><span>@Model.CPU.CPUMaxTemp</span>
+                    <h5>TDP: </h5><span>@Model.CPU.CPUTDP</span>
+                    <h5>Launch Date: </h5><span>@Model.CPU.CPULaunchDate</span>
+                }
+                @if(Model.CPUCooler!=null)
+                {
+                    <h5>Socket: </h5><span>@Model.CPUCooler.CPUCoolerSocket</span>
+                    <h5>Cooling Type: </h5><span>@Model.CPUCooler.CPUCoolerCoolingType</span>
+                    <h5>Bearing: </h5><span>@Model.CPUCooler.CPUCoolerBearing</span>
+                    <h5>Nr Vents: </h5><span>@Model.CPUCooler.CPUCoolerNrVents</span>
+                    <h5>PWM Vent: </h5><span>@Model.CPUCooler.CPUCoolerPWMVent</span>
+                    <h5>Rotation Speed: </h5><span>@Model.CPUCooler.CPUCoolerRotationSpeed</span>
+                    <h5>Pump Speed: </h5><span>@Model.CPUCooler.CPUCoolerPumpSpeed</span>
+                    <h5>Airflux: </h5><span>@Model.CPUCooler.CPUCoolerAirflux</span>
+                    <h5>Noise: </h5><span>@Model.CPUCooler.CPUCoolerNoise</span>
+                    <h5>Pump Noise: </h5><span>@Model.CPUCooler.CPUCoolerPumpNoise</span>
+                    <h5>Air Pressure: </h5><span>@Model.CPUCooler.CPUCoolerAirPressure</span>
+                    <h5>Connector: </h5><span>@Model.CPUCooler.CPUCoolerConnector</span>
+                    <h5>Pump Connector: </h5><span>@Model.CPUCooler.CPUCoolerPumpConnector</span>
+                    <h5>Weight: </h5><span>@Model.CPUCooler.CPUCoolerWeight</span>
+                    <h5>Dimensions: </h5><span>@Model.CPUCooler.CPUCoolerDimensions</span>
+                    <h5>LED: </h5><span>@Model.CPUCooler.CPUCoolerLED</span>
+                    <h5>LCD: </h5><span>@Model.CPUCooler.CPUCoolerLCD</span>
+                }
+                @if (Model.GPU != null)
+                {
+                    <h5>Interface: </h5><span>@Model.GPU.GPUInterface</span>
+                    <h5>Max Resolution: </h5><span>@Model.GPU.GPUMaxResolution</span>
+                    <h5>Model: </h5><span>@Model.GPU.GPUModel</span>
+                    <h5>Cooling: </h5><span>@Model.GPU.GPUCooling</span>
+                    <h5>Series: </h5><span>@Model.GPU.GPUSeries</span>
+                    <h5>Technology: </h5><span>@Model.GPU.GPUTechnology</span>
+                    <h5>Graphic Processor: </h5><span>@Model.GPU.GPUGraphicProcessor</span>
+                    <h5>Boost Clock: </h5><span>@Model.GPU.GPUBostClock</span>
+                    <h5>Shader Model: </h5><span>@Model.GPU.GPUShaderModel</span>
+                    <h5>Texture Units: </h5><span>@Model.GPU.GPUTextureUnits</span>
+                    <h5>Raster Operators: </h5><span>@Model.GPU.GPURasterOperators</span>
+                    <h5>Cuda Cores: </h5><span>@Model.GPU.GPUCudaCores</span>
+                    <h5>Memory Type: </h5><span>@Model.GPU.GPUMemoryType</span>
+                    <h5>Memory Size: </h5><span>@Model.GPU.GPUMemorySize</span>
+                    <h5>Memory Bus: </h5><span>@Model.GPU.GPUMemoryBus</span>
+                    <h5>Memory Frequency: </h5><span>@Model.GPU.GPUMemoryFrequency</span>
+                    <h5>HDMI: </h5><span>@Model.GPU.GPUHDMI</span>
+                    <h5>Display Port: </h5><span>@Model.GPU.GPUDisplayPort</span>
+                }
+            </div>
+        </div>
+    </section>
+
+    <!--
+	<section id="product1" class="section-p1">
+		<h2>Featured Products</h2>
+		<p>New components in stock!</p>
+		<div class="pro-container">
+			<div class="pro">
+				<img src="img/products/f1.png" alt="">
+				<div class="des">
+					<span>AMD Ryzen 7 8700G 4.2GHz</span>
+	<div class="star">
+		<i class="fas fa-star"></i>
+		<i class="fas fa-star"></i>
+		<i class="fas fa-star"></i>
+		<i class="fas fa-star"></i>
+		<i class="fas fa-star"></i>
+	</div>
+	<h4>1.399 RON</h4>
+	</div>
+	<a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+	</div>
+	<div class="pro">
+		<img src="img/products/f2.png" alt="">
+		<div class="des">
+			<span>AMD Ryzen 7 7800X3D 4.2GHz</span>
+			<div class="star">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			</div>
+			<h4>1.999 RON</h4>
+		</div>
+		<a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+	</div>
+	<div class="pro">
+		<img src="img/products/f3.png" alt="">
+		<div class="des">
+			<span>AMD Ryzen Threadripper PRO 7975WX 4.0Ghz</span>
+			<div class="star">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			</div>
+			<h4>1.399 lei</h4>
+		</div>
+		<a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+	</div>
+
+
+
+
+	</div>
+	</section>
+
+    -->
+
+    <!--
+	<script>
+			var MainImg = document.getElementById("MainImg");
+			var smallImg = document.getElementsByClassName("small-img");
+
+			smallImg[0].onclick = function () {
+				MainImg.src = smallImg[0].src;
+			}
+			smallImg[1].onclick = function () {
+				MainImg.src = smallImg[1].src;
+			}
+			smallImg[2].onclick = function () {
+				MainImg.src = smallImg[2].src;
+			}
+			smallImg[3].onclick = function () {
+				MainImg.src = smallImg[3].src;
+			}
+		</script>
+    -->
+    
+
+    <script src="script.js"></script>
+</body>

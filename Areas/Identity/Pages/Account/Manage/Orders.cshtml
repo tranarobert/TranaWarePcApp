@@ -1,0 +1,46 @@
+﻿@page
+@model PawWebApp.Areas.Identity.Pages.Account.Manage.OrdersModel
+@{
+    ViewData["Title"] = "Your Orders";
+    ViewData["ActivePage"] = ManageNavPages.Orders;
+    var currentUserId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+}
+
+<h2>Your Orders</h2>
+
+@if (Model.Orders.Count == 0)
+{
+    <p>You have no orders.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Total Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model.Orders)
+            {
+                @if(order.UserId == currentUserId)
+                {
+                    <tr>
+                        <td>@order.Id</td>
+                        <td>@order.TotalPrice RON</td>
+                        @* <td>
+            <ul>
+            @foreach (var item in order.OrderItems)
+            {
+            <li>@item.ProductName - Quantity: @item.Quantity, Price: @item.Price</li>
+            }
+            </ul>
+            </td> *@
+                    </tr>
+                }
+                
+            }
+        </tbody>
+    </table>
+}

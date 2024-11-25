@@ -1,0 +1,37 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using PawWebApp.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+
+@if (SignInManager.IsSignedIn(User))
+{
+    
+		<li class="nav-item">
+			   <a id="manage" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @UserManager.GetUserName(User)!</a>
+		   </li>
+
+    <li>
+        @if (!string.IsNullOrEmpty(UserManager.GetUserAsync(User).Result.ProfilePhotoPath))
+        {
+            <img src="@UserManager.GetUserAsync(User).Result.ProfilePhotoPath" alt="Profile Photo" class="profile-photo" style="width: 50px; height: 50px; border-radius: 50%;" />
+        }
+        <!--<a id="manage" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @UserManager.GetUserName(User)!</a> -->
+
+    </li>
+
+        <li><a asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">Logout</a></li>
+
+        
+}
+else
+{
+    <li>
+        <a class="nav-link text-dark" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
+    </li>
+    <li>
+        <a class="nav-link text-dark" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
+    </li>
+}
