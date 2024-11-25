@@ -1,4 +1,4 @@
-﻿@model PawWebApp.Models.PcComponent
+﻿@model TranaWarePc.Models.PcComponent
 
 @{
     ViewData["Title"] = "Details";
@@ -9,22 +9,22 @@
         <div class="single-pro-image">
             <img src="@Url.Content("~/img/products/" + @Model.PhotoFileName)" width="100%" alt="">
             <!--
-                <div class="small-img-group">
-                <div class="small-img-col">
-                    <img src="~/img/products/f1.png" width="100%" class="small-img" alt="">
-                </div>
-                <div class="small-img-col">
-                    <img src="~/img/products/f1_1.png" width="100%" class="small-img" alt="">
-                </div>
-                <div class="small-img-col">
-                    <img src="~/img/products/f1_2.png" width="100%" class="small-img" alt="">
-                </div>
-                <div class="small-img-col">
-                    <img src="~/img/products/f1_3.png" width="100%" class="small-img" alt="">
-                </div>
+            <div class="small-img-group">
+            <div class="small-img-col">
+            <img src="~/img/products/f1.png" width="100%" class="small-img" alt="">
+            </div>
+            <div class="small-img-col">
+            <img src="~/img/products/f1_1.png" width="100%" class="small-img" alt="">
+            </div>
+            <div class="small-img-col">
+            <img src="~/img/products/f1_2.png" width="100%" class="small-img" alt="">
+            </div>
+            <div class="small-img-col">
+            <img src="~/img/products/f1_3.png" width="100%" class="small-img" alt="">
+            </div>
             </div>
             -->
-            
+
         </div>
         <div class="single-pro-details">
             <h4>@Model.Name</h4>
@@ -32,10 +32,15 @@
             <input type="number" value="1">
             <a href="@Url.Action("AddToCart", "Cart", new { productId = Model.Id })" class="btn btn-primary">Add to Cart</a>
 
+            @if(User.IsInRole("Administrator"))
+            {
+                <a href="@Url.Action("Edit", "PcComponents")" class="btn btn-primary">Edit</a>
+            }
+
             @* <button class="normal">Add to cart</button> *@
             <h3>Specifications</h3>
             <div class="specifications">
-                @if(Model.CPU!=null)
+                @if (Model.CPU != null)
                 {
                     <h5>Platform </h5><span>@Model.CPU.CPUPlatform</span>
                     <h5>Socket: </h5><span>@Model.CPU.CPUSocket</span>

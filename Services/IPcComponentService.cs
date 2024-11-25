@@ -1,8 +1,8 @@
-﻿using PawWebApp.Models;
+﻿using TranaWarePc.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace PawWebApp.Services
+namespace TranaWarePc.Services
 {
     public interface IPcComponentService
     {

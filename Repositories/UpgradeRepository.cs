@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PawWebApp.Models;
+using TranaWarePc.Models;
 
-namespace PawWebApp.Repositories
+namespace TranaWarePc.Repositories
 {
     public class UpgradeRepository : IUpgradeRepository
     {

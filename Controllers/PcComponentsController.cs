@@ -5,14 +5,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using PawWebApp.Models;
-using PawWebApp.Services;
-using PawWebApp.Repositories;
+using TranaWarePc.Models;
+using TranaWarePc.Services;
+using TranaWarePc.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PawWebApp.Controllers
+namespace TranaWarePc.Controllers
 {
     [AllowAnonymous]
     public class PcComponentsController : Controller

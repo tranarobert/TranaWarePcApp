@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace PawWebApp.Models
+namespace TranaWarePc.Models
 {
     public class Upgrade
     {

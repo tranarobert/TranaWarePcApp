@@ -1,9 +1,9 @@
-﻿using PawWebApp.Models;
-using PawWebApp.Services;
+﻿using TranaWarePc.Models;
+using TranaWarePc.Services;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace PawWebApp.Services
+namespace TranaWarePc.Services
 {
     public class OrderService : IOrderService
     {

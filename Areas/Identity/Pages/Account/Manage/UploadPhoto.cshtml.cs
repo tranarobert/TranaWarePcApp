@@ -8,13 +8,13 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-using PawWebApp.Models;
+using TranaWarePc.Models;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace PawWebApp.Areas.Identity.Pages.Account.Manage
+namespace TranaWarePc.Areas.Identity.Pages.Account.Manage
 {
     public class UploadPhotoModel : PageModel
     {

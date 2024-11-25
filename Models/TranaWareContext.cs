@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace PawWebApp.Models
+namespace TranaWarePc.Models
 {
     public class TranaWareContext : IdentityDbContext<ApplicationUser>
     {

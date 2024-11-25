@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace PawWebApp.Models
+namespace TranaWarePc.Models
 {
     public class Order
     {

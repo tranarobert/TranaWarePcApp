@@ -1,7 +1,7 @@
-﻿using PawWebApp.Models;
+﻿using TranaWarePc.Models;
 using System.Threading.Tasks;
 
-namespace PawWebApp.Services
+namespace TranaWarePc.Services
 {
     public interface IOrderService
     {

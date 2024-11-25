@@ -11,9 +11,9 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using PawWebApp.Models;
+using TranaWarePc.Models;
 
-namespace PawWebApp.Areas.Identity.Pages.Account.Manage
+namespace TranaWarePc.Areas.Identity.Pages.Account.Manage
 {
     public class ExternalLoginsModel : PageModel
     {

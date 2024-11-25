@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PawWebApp.Models;
-using PawWebApp.Repositories;
-using PawWebApp.Services;
+using TranaWarePc.Models;
+using TranaWarePc.Repositories;
+using TranaWarePc.Services;
 
-namespace PawWebApp.Services
+namespace TranaWarePc.Services
 {
     public class UpgradeService : IUpgradeService
     {

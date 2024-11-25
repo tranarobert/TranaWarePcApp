@@ -12,9 +12,9 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
-using PawWebApp.Models;
+using TranaWarePc.Models;
 
-namespace PawWebApp.Areas.Identity.Pages.Account.Manage
+namespace TranaWarePc.Areas.Identity.Pages.Account.Manage
 {
     public class EmailModel : PageModel
     {

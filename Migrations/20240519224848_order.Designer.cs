@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using PawWebApp.Models;
+using TranaWarePc.Models;
 
 #nullable disable
 
-namespace PawWebApp.Migrations
+namespace TranaWarePc.Migrations
 {
     [DbContext(typeof(TranaWareContext))]
     [Migration("20240519224848_order")]
@@ -162,7 +162,7 @@ namespace PawWebApp.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.ApplicationUser", b =>
+            modelBuilder.Entity("TranaWarePc.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -230,7 +230,7 @@ namespace PawWebApp.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.Blog", b =>
+            modelBuilder.Entity("TranaWarePc.Models.Blog", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -258,7 +258,7 @@ namespace PawWebApp.Migrations
                     b.ToTable("Blogs");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.CPU", b =>
+            modelBuilder.Entity("TranaWarePc.Models.CPU", b =>
                 {
                     b.Property<int>("CPUID")
                         .ValueGeneratedOnAdd()
@@ -328,7 +328,7 @@ namespace PawWebApp.Migrations
                     b.ToTable("CPUs");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.CPUCooler", b =>
+            modelBuilder.Entity("TranaWarePc.Models.CPUCooler", b =>
                 {
                     b.Property<int>("CPUCoolerID")
                         .ValueGeneratedOnAdd()
@@ -415,7 +415,7 @@ namespace PawWebApp.Migrations
                     b.ToTable("CPUCoolers");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.Contact", b =>
+            modelBuilder.Entity("TranaWarePc.Models.Contact", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -444,7 +444,7 @@ namespace PawWebApp.Migrations
                     b.ToTable("Contacts");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.GPU", b =>
+            modelBuilder.Entity("TranaWarePc.Models.GPU", b =>
                 {
                     b.Property<int>("GPUID")
                         .ValueGeneratedOnAdd()
@@ -535,7 +535,7 @@ namespace PawWebApp.Migrations
                     b.ToTable("GPUs");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.HDD", b =>
+            modelBuilder.Entity("TranaWarePc.Models.HDD", b =>
                 {
                     b.Property<int>("HDDID")
                         .ValueGeneratedOnAdd()
@@ -582,7 +582,7 @@ namespace PawWebApp.Migrations
                     b.ToTable("HDDs");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.Motherboard", b =>
+            modelBuilder.Entity("TranaWarePc.Models.Motherboard", b =>
                 {
                     b.Property<int>("MotherboardID")
                         .ValueGeneratedOnAdd()
@@ -685,7 +685,7 @@ namespace PawWebApp.Migrations
                     b.ToTable("Motherboards");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.Newsletter", b =>
+            modelBuilder.Entity("TranaWarePc.Models.Newsletter", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -702,7 +702,7 @@ namespace PawWebApp.Migrations
                     b.ToTable("Newsletters");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.Order", b =>
+            modelBuilder.Entity("TranaWarePc.Models.Order", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -727,7 +727,7 @@ namespace PawWebApp.Migrations
                     b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.OrderItem", b =>
+            modelBuilder.Entity("TranaWarePc.Models.OrderItem", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -756,7 +756,7 @@ namespace PawWebApp.Migrations
                     b.ToTable("OrderItems");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.PCCase", b =>
+            modelBuilder.Entity("TranaWarePc.Models.PCCase", b =>
                 {
                     b.Property<int>("PCCaseID")
                         .ValueGeneratedOnAdd()
@@ -843,7 +843,7 @@ namespace PawWebApp.Migrations
                     b.ToTable("PCCases");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.PSU", b =>
+            modelBuilder.Entity("TranaWarePc.Models.PSU", b =>
                 {
                     b.Property<int>("PSUID")
                         .ValueGeneratedOnAdd()
@@ -902,7 +902,7 @@ namespace PawWebApp.Migrations
                     b.ToTable("PSUs");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.PcComponent", b =>
+            modelBuilder.Entity("TranaWarePc.Models.PcComponent", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -929,7 +929,7 @@ namespace PawWebApp.Migrations
                     b.ToTable("PCComponents");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.RAM", b =>
+            modelBuilder.Entity("TranaWarePc.Models.RAM", b =>
                 {
                     b.Property<int>("RAMID")
                         .ValueGeneratedOnAdd()
@@ -992,7 +992,7 @@ namespace PawWebApp.Migrations
                     b.ToTable("RAMs");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.SSD", b =>
+            modelBuilder.Entity("TranaWarePc.Models.SSD", b =>
                 {
                     b.Property<int>("SSDID")
                         .ValueGeneratedOnAdd()
@@ -1051,7 +1051,7 @@ namespace PawWebApp.Migrations
                     b.ToTable("SSDs");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.Upgrade", b =>
+            modelBuilder.Entity("TranaWarePc.Models.Upgrade", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1095,7 +1095,7 @@ namespace PawWebApp.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("PawWebApp.Models.ApplicationUser", null)
+                    b.HasOne("TranaWarePc.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -1104,7 +1104,7 @@ namespace PawWebApp.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("PawWebApp.Models.ApplicationUser", null)
+                    b.HasOne("TranaWarePc.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -1119,7 +1119,7 @@ namespace PawWebApp.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("PawWebApp.Models.ApplicationUser", null)
+                    b.HasOne("TranaWarePc.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -1128,71 +1128,71 @@ namespace PawWebApp.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("PawWebApp.Models.ApplicationUser", null)
+                    b.HasOne("TranaWarePc.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.CPU", b =>
+            modelBuilder.Entity("TranaWarePc.Models.CPU", b =>
                 {
-                    b.HasOne("PawWebApp.Models.PcComponent", "pcComponent")
+                    b.HasOne("TranaWarePc.Models.PcComponent", "pcComponent")
                         .WithOne("CPU")
-                        .HasForeignKey("PawWebApp.Models.CPU", "PcComponentId")
+                        .HasForeignKey("TranaWarePc.Models.CPU", "PcComponentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("pcComponent");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.CPUCooler", b =>
+            modelBuilder.Entity("TranaWarePc.Models.CPUCooler", b =>
                 {
-                    b.HasOne("PawWebApp.Models.PcComponent", "pcComponent")
+                    b.HasOne("TranaWarePc.Models.PcComponent", "pcComponent")
                         .WithOne("CPUCooler")
-                        .HasForeignKey("PawWebApp.Models.CPUCooler", "PcComponentId")
+                        .HasForeignKey("TranaWarePc.Models.CPUCooler", "PcComponentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("pcComponent");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.GPU", b =>
+            modelBuilder.Entity("TranaWarePc.Models.GPU", b =>
                 {
-                    b.HasOne("PawWebApp.Models.PcComponent", "pcComponent")
+                    b.HasOne("TranaWarePc.Models.PcComponent", "pcComponent")
                         .WithOne("GPU")
-                        .HasForeignKey("PawWebApp.Models.GPU", "PcComponentId")
+                        .HasForeignKey("TranaWarePc.Models.GPU", "PcComponentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("pcComponent");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.HDD", b =>
+            modelBuilder.Entity("TranaWarePc.Models.HDD", b =>
                 {
-                    b.HasOne("PawWebApp.Models.PcComponent", "pcComponent")
+                    b.HasOne("TranaWarePc.Models.PcComponent", "pcComponent")
                         .WithOne("HDD")
-                        .HasForeignKey("PawWebApp.Models.HDD", "PcComponentId")
+                        .HasForeignKey("TranaWarePc.Models.HDD", "PcComponentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("pcComponent");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.Motherboard", b =>
+            modelBuilder.Entity("TranaWarePc.Models.Motherboard", b =>
                 {
-                    b.HasOne("PawWebApp.Models.PcComponent", "pcComponent")
+                    b.HasOne("TranaWarePc.Models.PcComponent", "pcComponent")
                         .WithOne("Motherboard")
-                        .HasForeignKey("PawWebApp.Models.Motherboard", "PcComponentId")
+                        .HasForeignKey("TranaWarePc.Models.Motherboard", "PcComponentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("pcComponent");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.Order", b =>
+            modelBuilder.Entity("TranaWarePc.Models.Order", b =>
                 {
-                    b.HasOne("PawWebApp.Models.ApplicationUser", "User")
+                    b.HasOne("TranaWarePc.Models.ApplicationUser", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -1201,15 +1201,15 @@ namespace PawWebApp.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.OrderItem", b =>
+            modelBuilder.Entity("TranaWarePc.Models.OrderItem", b =>
                 {
-                    b.HasOne("PawWebApp.Models.Order", "Order")
+                    b.HasOne("TranaWarePc.Models.Order", "Order")
                         .WithMany("OrderItems")
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("PawWebApp.Models.PcComponent", "Product")
+                    b.HasOne("TranaWarePc.Models.PcComponent", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -1220,56 +1220,56 @@ namespace PawWebApp.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.PCCase", b =>
+            modelBuilder.Entity("TranaWarePc.Models.PCCase", b =>
                 {
-                    b.HasOne("PawWebApp.Models.PcComponent", "pcComponent")
+                    b.HasOne("TranaWarePc.Models.PcComponent", "pcComponent")
                         .WithOne("PCCase")
-                        .HasForeignKey("PawWebApp.Models.PCCase", "PcComponentId")
+                        .HasForeignKey("TranaWarePc.Models.PCCase", "PcComponentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("pcComponent");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.PSU", b =>
+            modelBuilder.Entity("TranaWarePc.Models.PSU", b =>
                 {
-                    b.HasOne("PawWebApp.Models.PcComponent", "pcComponent")
+                    b.HasOne("TranaWarePc.Models.PcComponent", "pcComponent")
                         .WithOne("PSU")
-                        .HasForeignKey("PawWebApp.Models.PSU", "PcComponentId")
+                        .HasForeignKey("TranaWarePc.Models.PSU", "PcComponentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("pcComponent");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.RAM", b =>
+            modelBuilder.Entity("TranaWarePc.Models.RAM", b =>
                 {
-                    b.HasOne("PawWebApp.Models.PcComponent", "pcComponent")
+                    b.HasOne("TranaWarePc.Models.PcComponent", "pcComponent")
                         .WithOne("RAM")
-                        .HasForeignKey("PawWebApp.Models.RAM", "PcComponentId")
+                        .HasForeignKey("TranaWarePc.Models.RAM", "PcComponentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("pcComponent");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.SSD", b =>
+            modelBuilder.Entity("TranaWarePc.Models.SSD", b =>
                 {
-                    b.HasOne("PawWebApp.Models.PcComponent", "pcComponent")
+                    b.HasOne("TranaWarePc.Models.PcComponent", "pcComponent")
                         .WithOne("SSD")
-                        .HasForeignKey("PawWebApp.Models.SSD", "PcComponentId")
+                        .HasForeignKey("TranaWarePc.Models.SSD", "PcComponentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("pcComponent");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.Order", b =>
+            modelBuilder.Entity("TranaWarePc.Models.Order", b =>
                 {
                     b.Navigation("OrderItems");
                 });
 
-            modelBuilder.Entity("PawWebApp.Models.PcComponent", b =>
+            modelBuilder.Entity("TranaWarePc.Models.PcComponent", b =>
                 {
                     b.Navigation("CPU");
 

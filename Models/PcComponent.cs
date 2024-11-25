@@ -1,4 +1,4 @@
-﻿namespace PawWebApp.Models
+﻿namespace TranaWarePc.Models
 {
     public class PcComponent
     {
@@ -21,5 +21,6 @@
         public PSU? PSU { get; set; }
         public PCCase? PCCase{ get; set; }
         public CPUCooler? CPUCooler { get; set; }
+        public string? ComponentType { get; set; }
     }
 }

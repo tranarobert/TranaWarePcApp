@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
-using PawWebApp.Models;
-using PawWebApp.Controllers;
+using TranaWarePc.Models;
+using TranaWarePc.Controllers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using PawWebApp.Services;
+using TranaWarePc.Services;
 
-namespace PawWebApp.Services
+namespace TranaWarePc.Services
 {
     public class CartService : ICartService
     {

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace PawWebApp.Models
+namespace TranaWarePc.Models
 {
     public class PCCase
     {

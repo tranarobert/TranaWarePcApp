@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace PawWebApp.Migrations
+namespace TranaWarePc.Migrations
 {
     /// <inheritdoc />
     public partial class pagination : Migration

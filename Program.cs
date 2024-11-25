@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using PawWebApp.Models;
-using PawWebApp.Services;
-using PawWebApp.Repositories;
+using TranaWarePc.Models;
+using TranaWarePc.Services;
+using TranaWarePc.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 

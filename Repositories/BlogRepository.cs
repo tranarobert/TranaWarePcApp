@@ -2,9 +2,9 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using PawWebApp.Models;
+using TranaWarePc.Models;
 
-namespace PawWebApp.Repositories
+namespace TranaWarePc.Repositories
 {
     public class BlogRepository : IBlogRepository
     {

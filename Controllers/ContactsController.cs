@@ -6,9 +6,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using PawWebApp.Models;
+using TranaWarePc.Models;
 
-namespace PawWebApp.Controllers
+namespace TranaWarePc.Controllers
 {
     public class ContactsController : Controller
     {

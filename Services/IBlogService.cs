@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using PawWebApp.Models;
+using TranaWarePc.Models;
 
-namespace PawWebApp.Services
+namespace TranaWarePc.Services
 {
     public interface IBlogService
     {

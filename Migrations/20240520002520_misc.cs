@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace PawWebApp.Migrations
+namespace TranaWarePc.Migrations
 {
     /// <inheritdoc />
     public partial class misc : Migration
