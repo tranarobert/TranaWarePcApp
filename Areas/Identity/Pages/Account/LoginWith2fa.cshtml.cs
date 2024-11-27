@@ -11,9 +11,9 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
-using PawWebApp.Models;
+using TranaWarePcApp.Models;
 
-namespace PawWebApp.Areas.Identity.Pages.Account
+namespace TranaWarePcApp.Areas.Identity.Pages.Account
 {
     public class LoginWith2faModel : PageModel
     {

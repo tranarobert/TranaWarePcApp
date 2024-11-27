@@ -9,9 +9,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-using PawWebApp.Models;
+using TranaWarePcApp.Models;
 
-namespace PawWebApp.Areas.Identity.Pages.Account.Manage
+namespace TranaWarePcApp.Areas.Identity.Pages.Account.Manage
 {
     public class ChangePasswordModel : PageModel
     {

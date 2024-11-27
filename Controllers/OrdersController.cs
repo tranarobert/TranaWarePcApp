@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using PawWebApp.Models;
-using PawWebApp.Services;
+using TranaWarePcApp.Models;
+using TranaWarePcApp.Services;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace PawWebApp.Controllers
+namespace TranaWarePcApp.Controllers
 {
     [Authorize]
     public class OrdersController : Controller

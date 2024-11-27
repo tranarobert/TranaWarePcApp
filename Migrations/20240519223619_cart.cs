@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace PawWebApp.Migrations
+namespace TranaWarePcApp.Migrations
 {
     /// <inheritdoc />
     public partial class cart : Migration

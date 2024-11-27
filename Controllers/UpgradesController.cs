@@ -6,10 +6,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using PawWebApp.Models;
-using PawWebApp.Services;
+using TranaWarePcApp.Models;
+using TranaWarePcApp.Services;
 
-namespace PawWebApp.Controllers
+namespace TranaWarePcApp.Controllers
 {
     public class UpgradesController : Controller
     {

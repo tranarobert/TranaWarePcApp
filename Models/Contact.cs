@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace PawWebApp.Models
+namespace TranaWarePcApp.Models
 {
     public class Contact
     {

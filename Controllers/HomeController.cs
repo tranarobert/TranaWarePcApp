@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using PawWebApp.Models;
-using PawWebApp.Services;
+using TranaWarePcApp.Models;
+using TranaWarePcApp.Services;
 using System.Diagnostics;
 
-namespace PawWebApp.Controllers
+namespace TranaWarePcApp.Controllers
 {
     [AllowAnonymous]
     public class HomeController : Controller

@@ -1,9 +1,9 @@
-﻿using PawWebApp.Models;
-using PawWebApp.Repositories;
+﻿using TranaWarePcApp.Models;
+using TranaWarePcApp.Repositories;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace PawWebApp.Services
+namespace TranaWarePcApp.Services
 {
     public class PcComponentService : IPcComponentService
     {

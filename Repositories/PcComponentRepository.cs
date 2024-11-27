@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PawWebApp.Models;
+using TranaWarePcApp.Models;
 
-namespace PawWebApp.Repositories
+namespace TranaWarePcApp.Repositories
 {
     public class PcComponentRepository : IPcComponentRepository
     {

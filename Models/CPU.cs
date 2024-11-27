@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace PawWebApp.Models
+namespace TranaWarePcApp.Models
 {
     public class CPU
     {

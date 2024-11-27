@@ -1,4 +1,4 @@
-﻿namespace PawWebApp.Models
+﻿namespace TranaWarePcApp.Models
 {
     public class Newsletter
     {

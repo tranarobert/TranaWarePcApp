@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace PawWebApp.Models
+namespace TranaWarePcApp.Models
 {
     public class ApplicationUser : IdentityUser
     {

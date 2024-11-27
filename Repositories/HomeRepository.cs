@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PawWebApp.Models;
-using PawWebApp.Services;
-using PawWebApp.Repositories;
+using TranaWarePcApp.Models;
+using TranaWarePcApp.Services;
+using TranaWarePcApp.Repositories;
 
-namespace PawWebApp.Repositories
+namespace TranaWarePcApp.Repositories
 {
     public class HomeRepository : IHomeRepository
     {

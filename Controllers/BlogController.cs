@@ -1,16 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using PawWebApp.Models;
-using PawWebApp.Services;
+using TranaWarePcApp.Models;
+using TranaWarePcApp.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using PawWebApp.Repositories;
+using TranaWarePcApp.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authorization.Infrastructure;
 
-namespace PawWebApp.Controllers
+namespace TranaWarePcApp.Controllers
 {
 
 	public class BlogController : Controller

@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using PawWebApp.Models;
-using PawWebApp.Services;
+using TranaWarePcApp.Models;
+using TranaWarePcApp.Services;
 
 public class CartController : Controller
 {

@@ -1,6 +1,6 @@
-﻿using PawWebApp.Models;
+﻿using TranaWarePcApp.Models;
 
-namespace PawWebApp.Services
+namespace TranaWarePcApp.Services
 {
     public interface ICartService
     {

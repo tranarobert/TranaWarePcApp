@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using PawWebApp.Models;
-using PawWebApp.Services;
+using TranaWarePcApp.Models;
+using TranaWarePcApp.Services;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace PawWebApp.Areas.Identity.Pages.Account.Manage
+namespace TranaWarePcApp.Areas.Identity.Pages.Account.Manage
 {
     public class OrdersModel : PageModel
     {

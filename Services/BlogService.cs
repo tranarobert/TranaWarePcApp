@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using PawWebApp.Models;
-using PawWebApp.Repositories;
+using TranaWarePcApp.Models;
+using TranaWarePcApp.Repositories;
 
-namespace PawWebApp.Services
+namespace TranaWarePcApp.Services
 {
     public class BlogService : IBlogService
     {
